@@ -1,0 +1,1665 @@
+html, body
+    padding: 0
+    margin: 0
+    background-image: var(--body-background-url)
+    background-size: cover
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    overflow: hidden
+    color: white
+
+.index_page
+    width: 100vw
+    overflow-x: hidden
+    height: 100vh
+    display: flex
+    overflow-y: hidden
+
+.index_page_menu
+    flex: 1.2
+    height: 100vh
+    background-color: #131931
+    display: flex
+
+.index_page_body
+    flex: 6
+
+.index_page_body_data
+    width: 95%
+    height: calc(100vh - 180px)
+    overflow-y: scroll
+    margin: 0 auto
+    position: relative
+    top: 30px
+
+.index_page_menu_block
+    width: 100%
+
+.index_page_menu_block_line
+    position: relative
+    padding: 15px 25px
+    width: calc(100% - 50px)
+    color: #596A9A
+    font-size: 18px
+    cursor: pointer
+
+    span
+        margin-left: 10px
+
+    i
+        color: #2FAAF5
+
+.index_page_menu_block_line.alerts::before
+    display: flex
+
+.index_page_menu_block_line::before
+    width: 25px
+    height: 25px
+    font-size: 13px
+    border-radius: 50%
+    background-color: #2FA1E8
+    position: absolute
+    right: 20px
+    top: 15px
+    color: white
+    content: "1"
+    display: -webkit-box
+    display: -ms-flexbox
+    display: none
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
+.index_page_menu_block_line.selected
+    border-left: 2px solid #2FA1E8
+    background-color: #0E1122
+    color: #15A9F5
+
+.index_page_menu_block_line:hover
+    border-left: 2px solid #2FA1E8
+    background-color: #0E1122
+
+.index_page_body_header
+    width: 100%
+    height: 120px
+    position: relative
+
+.index_page_body_data::-webkit-scrollbar-thumb
+    background-color: darkgrey
+
+.index_page_body_data::-webkit-scrollbar-track
+    background-color: black
+
+.index_page_body_data::-webkit-scrollbar
+    width: 0
+
+.index_page_body_header_user
+    width: 95%
+    height: 60%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.index_page_body_header_info
+    width: 95%
+    height: 40%
+    display: flex
+    align-items: center
+    margin: 0 auto
+    text-transform: uppercase
+    font-weight: bold
+
+.index_page_body_header_user_avatar
+    display: flex
+    align-items: center
+
+.index_page_body_header_user_avatar_img
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #A4B1E0
+    margin-right: 20px
+    overflow: hidden
+
+    img
+        width: 100%
+
+.index_page_body_header_user_avatar_name
+    
+    p
+        padding: 0
+        margin: 0
+        color: #3F496A
+
+    span
+        font-size: 20px
+        color: #32B8FF
+
+.preloader
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: #0E1122
+    z-index: 1000000000000000
+
+.settingBlock
+    width: calc(100% - 40px)
+    background-color: #182037
+    border-radius: 3px
+    padding: 20px
+
+    p
+        font-weight: bold
+        color: #9BAAD9
+        font-size: 20px
+        padding: 0
+        margin: 0
+
+.settingBlock_header_line
+    width: 100%
+    margin-top: 20px
+    color: #3A4569
+    display: flex
+    text-align: left
+
+    span
+        flex: 1
+
+.settingBlock_body_line
+    width: calc(100% - 20px)
+    margin: 20px 0
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    padding: 0 10px
+    border-radius: 8px
+    text-align: left
+
+    span
+        flex: 1
+        color: #8592C6
+        display: flex
+        align-items: center
+
+.settingBlock_block
+    padding: 10px 55px
+    color: white !important
+    border-radius: 3px
+
+.settingBlock_wait
+    background-color: #FB62D6
+    display: flex
+    justify-content: center
+
+
+.chat_block
+    width: 100%
+    display: flex
+
+.chat_block_chat 
+    flex: 3
+    margin-right: 20px
+    background-color: #182037
+    position: relative
+    
+.chat_block_chat_header
+    width: calc(100% - 80px)
+    height: 100px
+    padding: 0 40px
+    border-bottom: 1px solid #252E4A
+    display: flex
+    align-items: center
+    border-radius: 5px
+
+    span
+        font-weight: bold
+        color: #8592C6
+        font-size: 25px
+
+.chat_block_chat_body
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.chat_block_chat_body_row
+    width: 90%
+    height: 90%
+
+.chat_block_info
+    flex: 1
+    height: 300px
+    background-color: #182037
+    border-radius: 5px
+    position: relative
+
+.settingBlock_accept_color
+    background-color: #10C760
+
+.index_page_menu.selected
+    margin-left: 0
+
+.buttons_menu
+    z-index: 10000000000
+    position: absolute
+    top: 20px
+    left: 20px
+    display: none
+    transition: all .2s
+
+    span
+        display: block
+        width: 35px 
+        height: 3px
+        background-color: #596A9A
+        margin: 9px 0
+
+.buttons_menu.selected
+    top: 25px
+
+    span:nth-child(2)
+        display: none
+
+    span:nth-child(1)
+        position: relative
+        transform: rotateZ(45deg)
+        top: 5.5px
+    span:nth-child(3)
+        position: relative
+        transform: rotateZ(315deg)
+        top: -5.5px
+
+.settingBlock_body_line
+    span:nth-child(4)
+        span
+            flex: none
+            width: -webkit-fill-available
+            display: flex
+            justify-content: center
+            align-items: center
+
+.settingBlock_body_line:hover
+    background-color: #2E3756
+   
+
+.info_active_block
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+
+.info_active_block_left,
+.info_active_block_right
+    width: 47%
+    background-color: #182037
+    border-radius: 3px
+    padding: 20px
+
+.info_active_block_photo
+    width: 150px
+    height: 150px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    background-color: #A4B1E0
+    margin: 0 auto
+    margin-top: 50px
+
+
+.info_active_block_right
+    text-align: center
+
+    span
+        font-size: 30px
+        color: #32B8FF
+        margin: 10px 0
+        display: block
+
+    p
+        padding: 0
+        margin: 0
+        color: #3F496A
+        margin-bottom: 40px
+
+
+.info_active_block_massage_button
+    padding: 1px 20px
+    border-radius: 3px
+    background-color: transparent
+    width: -webkit-fit-content
+    width: -moz-fit-content
+    width: fit-content
+    margin: 0 auto
+    margin-bottom: 20px
+    cursor: pointer
+    border: 1px solid #0D9D3F
+
+    span
+        font-size: 15px
+        color: #0D9D3F
+
+.info_active_block_left_header
+    font-weight: bold
+    color: #9BAAD9
+    font-size: 20px
+    padding: 0
+    margin: 0
+
+
+.info_active_block_left_buttons
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 50px
+
+    span
+        padding: 7px 20px
+        border-radius: 3px
+        margin-right: 20px
+        margin-bottom: 10px
+        margin-top: 10px
+        cursor: pointer
+        display: flex
+        width: 100%
+        justify-content: center
+
+.accept_block
+    background: rgb(19,170,249)
+    background: linear-gradient(90deg, rgba(19,170,249,1) 0%, rgba(20,132,253,1) 61%)
+
+.remove_block
+    background: rgb(249,70,70)
+    background: linear-gradient(90deg, rgba(249,70,70,1) 0%, rgba(213,45,45,1) 61%)
+
+.show_block
+    background: rgb(140,128,254)
+    background: linear-gradient(90deg, rgba(140,128,254,1) 0%, rgba(89,75,211,1) 61%)
+
+
+.chat_block_chat_body_row
+    position: relative
+
+.chat_block_chat_body_row_input
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    display: flex
+
+    input
+        border: 0
+        width: calc(100% - 20px)
+        padding: 20px
+        background-color: #0E1122
+        color: white
+
+    span
+        padding: 20px 40px
+        cursor: pointer
+        background: rgb(19,170,249)
+        background: linear-gradient(90deg, rgba(19,170,249,1) 0%, rgba(20,132,253,1) 61%)
+        
+
+.chat_block_info
+    text-align: center
+
+    span
+        ont-size: 30px
+        color: #32B8FF
+        margin: 10px 0
+        display: block
+
+    p
+        padding: 0
+        margin: 0
+        color: #3F496A
+        margin-bottom: 40px
+
+
+.info_active_block_left_info
+    margin: 20px 0
+    color: #8999CF
+    font-size: 18px
+    display: flex
+
+.info_active_block_left_info_line
+    margin-bottom: 7px
+    flex: 1
+
+    span
+        color: #40486c
+
+    a
+        color: #9BAAD9
+        font-size: 20px
+        width: 100%
+        display: block
+        margin-top: 20px
+
+
+.discret
+    width: calc(33% - 20px)
+    height: 350px
+    background-color: #182037
+    border-radius: 3px
+    position: relative
+    float: left
+    margin: 0 12.5px
+
+    canvas
+        width: 43%
+
+    .container
+        top: 15px
+
+#validate-bar__parcent-bar
+    font-weight: 100
+    font-size: 40px
+    color: #8394C9
+
+#validate-bar__parcent-bar::after
+    color: #8394C9
+    bottom: 0
+    font-size: 28px
+
+
+#validate-bar__parcent-bar2
+    font-weight: 100
+    font-size: 40px
+    color: #8394C9
+
+#validate-bar__parcent-bar2::after
+    color: #8394C9
+    bottom: 0
+    font-size: 28px
+
+#validate-bar__parcent-bar3
+    font-weight: 100
+    font-size: 40px
+    color: #8394C9
+
+#validate-bar__parcent-bar3::after
+    color: #8394C9
+    bottom: 0
+    font-size: 28px
+
+.discret_header
+    position: absolute
+    top: 20px
+    left: 20px
+    font-weight: bold
+    color: #9BAAD9
+    font-size: 20px
+
+.signature_canvas
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    canvas
+        position: relative
+        width: auto
+        background-color: white
+        transform: none
+
+.signature_canvas_span
+    display: flex
+    width: calc(100% - 40px)
+    height: 80px
+    align-items: center
+    padding: 0 20px
+    font-size: 22px
+    background-color: #182037
+
+
+.signature
+    .index_page_menu
+        display: none
+
+    .index_page_body_header_info
+        display: none
+
+    .index_page_body_header
+        height: 80px
+
+    .index_page_body_header_user
+        height: 100%
+
+    .index_page_buttons
+        display: flex
+        justify-content: space-between
+
+        span
+            padding: 7px 20px
+            margin-bottom: 10px
+            margin-top: 10px
+            cursor: pointer
+
+        .clean
+            background: linear-gradient(90deg, #f94646 0%, #d52d2d 61%)
+
+        .put
+            background: linear-gradient(90deg, #8c80fe 0%, #594bd3 61%)
+
+        .accept_signature
+            background: linear-gradient(90deg, #13aaf9 0%, #1484fd 61%)
+
+
+.accepting
+    .remove_block
+        display: none
+    .accept_block
+        display: none
+
+
+
+
+.chat_block_chat_body_msgs
+    height: calc(100% - 80px)
+    overflow-y: scroll
+
+.chat_block_chat_body_msgs::-webkit-scrollbar-thumb
+    background-color: darkgrey
+
+.chat_block_chat_body_msgs::-webkit-scrollbar-track
+    background-color: black
+
+.chat_block_chat_body_msgs::-webkit-scrollbar
+    width: 0
+
+.chat_block_chat_body_msgs_line
+    width: 100%
+    height: fit-content
+    margin-top: 20px
+    display: flex
+    justify-content: end
+
+.chat_block_chat_body_msgs_line_my
+    width: fit-content
+    padding: 20px 40px
+    border-radius: 3px
+    background-color: #3E4C71
+
+
+.msg_block_getting
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+.msg_block_getting_line
+    width: calc(50% - 60px)
+    padding: 20px
+    display: flex
+    margin-right: 20px
+    background-color: #182037
+    cursor: pointer
+    margin-bottom: 20px
+
+.msg_block_getting_line_img
+    width: 60px
+    height: 60px
+    background-color: #A4B1E0
+    border-radius: 50%
+
+.msg_block_getting_line_text
+    margin-left: 20px
+
+    p
+        padding: 0
+        margin: 0
+        margin-top: 10px
+        color: #3F4B6F
+
+    span
+        color: #8091C4
+        font-weight: 600
+        font-size: 18px
+
+
+
+.headerPaysBlock
+    width: calc(100% - 40px)
+    background-color: #182037
+    border-radius: 3px
+    padding: 20px
+    margin-bottom: 20px
+
+.headerPaysBlock_header_span
+    font-weight: bold
+    color: #9BAAD9
+    font-size: 20px
+    padding: 0
+    margin: 0
+
+.headerPaysBlock_header_line
+    width: 100%
+    margin-top: 20px
+    color: #3A4569
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    text-align: left
+
+    span
+        flex: 1
+
+.headerPaysBlock_body_line
+    width: calc(100% - 20px)
+    margin: 20px 0
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    padding: 0 10px
+    border-radius: 8px
+    text-align: left
+
+    span
+        flex: 1
+
+    input
+        display: none
+
+.headerPaysBlock_button
+    span
+        padding: 10px 20px
+        border-radius: 20px
+        display: block
+        width: fit-content
+        cursor: pointer
+        background: linear-gradient(90deg, rgba(140,128,254,1) 0%, rgba(89,75,211,1) 61%)
+
+
+.show_document
+    background: rgb(252,101,216)
+    background: linear-gradient(90deg, rgba(252,101,216,1) 0%, rgba(216,43,173,1) 61%)
+
+
+.headerPaysBlock_body_line_inv
+    span
+        display: block
+        padding: 10px 20px
+        border-radius: 3px
+        margin-bottom: 20px
+        background-image: radial-gradient(circle at 100% 100%, transparent 19px, #13a9f6 19px, #13a9f6 20px, transparent 20px), linear-gradient(to right, #13a9f6, #165096), radial-gradient(circle at 0% 100%, transparent 19px, #165096 19px, #165096 20px, transparent 20px), linear-gradient(to bottom, #165096, #164e93), radial-gradient(circle at 0% 0%, transparent 19px, #164e93 19px, #164e93 20px, transparent 20px), linear-gradient(to left, #164e93, #14a6f5), radial-gradient(circle at 100% 0%, transparent 19px, #14a6f5 19px, #14a6f5 20px, transparent 20px), linear-gradient(to top, #14a6f5, #13a9f6)
+
+
+.creating_page_block
+    width: 100%
+
+    #Attracted_headerInfoBlock_info_data_alert_buttom_cheack_input
+        display: none
+
+.creating_page
+    width: 40%
+    margin: 0 auto
+
+.creating_page_start
+    padding: 20px 50px 20px 30px
+    background-color: #3E4C71
+    border-radius: 8px
+    width: fit-content
+    font-size: 17px
+    line-height: 1.7
+    transition: all .5s
+
+    a
+        color: #13a2ef
+
+.creating_page_start_user_block
+    padding: 20px 50px
+    background-color: #252C46
+    border-radius: 8px
+    width: fit-content
+    font-size: 17px
+    line-height: 1.7
+    transition: all .5s
+    color: #8395C4
+
+.creating_page_input
+    width: 60%
+    background-color: #182037
+    border-radius: 8px
+    margin: 0 auto
+    padding: 10px
+    margin-top: 20px
+
+    input
+        width: calc(100% - 20px)
+        margin: 0 auto
+        border: 0
+        background-color: #0E1122
+        height: 40px
+        border-radius: 8px
+        color: white
+        padding: 0 10px
+
+.creating_page_input_div
+    width: calc(100% - 20px)
+    margin: 0 auto
+    border: 0
+    background-color: #0E1122
+    height: 40px
+    border-radius: 8px
+    color: white
+    padding: 0 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 20px !important
+
+    input
+        display: none
+
+    span
+        width: 100%
+
+.creating_page_input_button
+    display: flex
+    justify-content: flex-end
+    cursor: pointer
+    
+    span
+        background-image: radial-gradient(circle at 100% 100%, transparent 19px, #13a9f6 19px, #13a9f6 20px, transparent 20px), linear-gradient(to right, #13a9f6, #165096), radial-gradient(circle at 0% 100%, transparent 19px, #165096 19px, #165096 20px, transparent 20px), linear-gradient(to bottom, #165096, #164e93), radial-gradient(circle at 0% 0%, transparent 19px, #164e93 19px, #164e93 20px, transparent 20px), linear-gradient(to left, #164e93, #14a6f5), radial-gradient(circle at 100% 0%, transparent 19px, #14a6f5 19px, #14a6f5 20px, transparent 20px), linear-gradient(to top, #14a6f5, #13a9f6)
+        padding: 10px 20px
+        margin-top: 10px
+        border-radius: 8px
+        cursor: pointer
+
+
+.creating_page_start_user
+    margin-top: 20px
+    width: 100%
+    display: flex
+    justify-content: flex-end
+
+.add_project_button
+    background: rgb(20,182,255)
+    background: linear-gradient(90deg, rgba(20,182,255,1) 0%, rgba(19,135,255,1) 61%)
+    padding: 10px 20px
+    border-radius: 3px
+    margin-right: 60px
+    cursor: pointer
+
+.chat_block_chat_body_msgs_line_left
+    justify-content: start
+
+
+.index_page_menu_block_logo
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-top: 150px
+    margin-bottom: 20px
+
+    span
+        background: #14b6ff
+        background: -webkit-gradient(linear, left top, right top, from(#14b6ff), color-stop(61%, #1387ff))
+        background: linear-gradient( 90deg, #14b6ff 0%, #1387ff 61%)
+        padding: 10px 40px
+        border-radius: 3px
+        cursor: pointer
+        display: flex
+        justify-content: center
+
+
+._file
+    
+    .body_point_line_header
+        width: 100%
+        display: flex
+        .body_point_line_header_text
+            display: flex
+            justify-content: space-between
+            width: 100%
+
+
+.menu_reload_type
+    height: 72px
+    width: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    position: relative
+
+.menu_reload_type_menu
+    position: absolute
+    top: 100%
+    right: 0
+    width: 370px
+    padding: 20px
+    background-color: #182037
+    display: none
+    z-index: 10000
+
+.menu_reload_type_menu_line
+    padding: 20px 0
+    display: flex
+    font-size: 18px
+    color: #889bd9
+    cursor: pointer
+
+    i
+        margin-right: 20px
+
+.menu_reload_type_menu_line:hover
+    color: white
+
+.Attracted_headerInfoBlock
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+
+.Attracted_headerInfoBlock_block
+    width: calc(50% - 40px)
+    background-color: #182037
+    display: flex
+    align-items: center
+    padding: 15px
+
+.Attracted_headerInfoBlock_block_i
+    width: 70px
+    height: 70px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgb(20,179,255)
+    background: linear-gradient(90deg, rgba(20,179,255,1) 0%, rgba(18,130,250,1) 100%)
+    font-size: 30px
+    margin-left: 20px
+
+.Attracted_headerInfoBlock_block_text
+    margin-left: 20px
+
+    span
+        color: #9BAAD9
+        font-size: 20px
+        padding: 0
+        margin: 0
+
+    p
+        margin: 0
+        margin-top: -5px
+        font-size: 50px
+        font-weight: 100
+
+
+.moreGetButtons
+    width: 100%
+
+    span
+        padding: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: calc(100% - 40px)
+        cursor: pointer;
+        background-color: #182037
+        margin-top: 20px
+        color: white
+
+    i
+        margin-right: 20px
+
+
+.index_page_menu_block_line_alert
+    i
+        position: absolute
+        right: 0
+        top: 0
+        width: 12%
+        height: 100%
+        display: none
+        align-items: center
+
+
+.creating_page_input_viev
+    width: 40%
+    margin: 0 auto
+    margin-top: 20px
+    border-radius: 8px
+    overflow: hidden
+
+    img
+        width: 100%
+
+.settingBlock_add_acsess
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    span
+        background: #14b6ff
+        background: -webkit-gradient(linear, left top, right top, from(#14b6ff), color-stop(61%, #1387ff))
+        background: linear-gradient( 90deg, #14b6ff 0%, #1387ff 61%)
+        padding: 10px 40px
+        border-radius: 3px
+        cursor: pointer
+        display: flex
+        justify-content: center
+        margin-top: 20px
+
+
+.autch_block
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #0E1122
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+    
+    p
+        width: 85%
+        margin: 0 auto
+        margin-top: 20px
+
+.autch_block_row
+    width: 450px
+    height: 195px
+    background-color: #182037
+
+.autch_block_buttons
+    width: 85%
+    display: flex
+    justify-content: flex-end
+    margin: 0 auto
+    margin-top: 50px
+
+.autch_block_buttons_block
+    margin-left: 20px
+    padding: 10px 25px
+    cursor: pointer
+
+.autch_block_buttons_block_accept
+    background-color: #3A9FFF
+
+.settingBlock_body_line_obligations
+    input[type="file"]
+        display: none
+
+
+    
+
+@media (max-width: 500px)
+
+    .buttons_menu
+        display: block
+
+    .index_page_menu
+        position: fixed
+        z-index: 100000
+        width: 100vw
+        margin-left: -100%
+        transition: all .2s
+
+    .index_page_body_header_user
+        width: 90%
+
+    .index_page_body_header_info
+        justify-content: center
+
+    .settingBlock_body_line
+        span
+            white-space: nowrap
+
+        span:nth-child(4)
+            span
+                display: flex
+                justify-content: center
+
+    .settingBlock_header_line
+        span:nth-child(1),
+        span:nth-child(2)
+            display: none
+
+    .settingBlock_block
+        padding: 8px 12px
+        font-size: 12px
+
+    .info_active_block
+        display: block
+
+    .info_active_block_left,
+    .info_active_block_right
+        margin-bottom: 20px
+        width: calc(100% - 40px)
+
+
+.info_block_project
+    width: 100%
+    height: 60px
+    background-color: #182037
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-bottom: 20px
+    font-size: 23px
+
+.all_projects_show
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+.all_projects_show_block
+    width: 24%
+    border-radius: 15px
+    overflow: hidden
+
+    img
+        width: 100%
+        border-radius: 15px
+        overflow: hidden
+
+.get_money_abstraction_span_cheackbox
+    display: flex
+    align-items: center
+
+    input
+        margin-right: 10px
+
+.get_money_abstraction_button
+    width: 100%
+    display: flex
+    justify-content: flex-end
+
+    span
+        display: block
+        padding: 10px 20px
+        border-radius: 80px
+        background-color: #3A9FFF
+
+
+.invester_status_projects_status_first
+    width: 100%
+    height: 100%
+
+.invester_status_projects_status_first_line
+    width: 100%
+    display: flex
+
+    span,
+    a
+        flex: 1
+        color: #8592C6
+        text-align: center
+
+    a
+        color: white
+
+.invester_status_projects_status_first_line
+    padding: 15px 0
+    font-size: 18px
+
+
+
+
+.Attracted_by_me_headerRefUrlsBlock
+    h1
+        text-align: center
+
+.Attracted_by_me_headerRefUrlsBlock_blocks
+    width: 100%
+
+.Attracted_by_me_headerRefUrlsBlock_blocks_line
+    width: 100%
+    display: flex
+    align-items: center
+    background-color: #182037
+    height: 60px
+    margin-bottom: 20px
+
+    span
+        flex: 1
+        text-align: center
+
+.creating_page_input_document_img
+    display: flex
+    position: relative
+
+    img
+        width: 96%
+        border-radius: 12px
+        margin: 12px auto
+        filter: blur(0.5px)
+
+.creating_page_input_document_img_hover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.2)
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+
+    span
+        display: block
+        background-color: #182037
+        padding: 10px 20px
+        border-radius: 12px
+        cursor: pointer
+        margin-bottom: 20px
+        text-align: center
+
+.obligations_block
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+    .obligations_block_element
+        background-color: #182037
+        width: calc(33% - 20px)
+        margin-right: 10px
+        margin-left: 10px
+        margin-bottom: 20px
+
+        h1, h2
+            text-align: center
+
+        h3
+            color: red
+            text-align: center
+
+        .obligations_block_element_line
+            width: 85%
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin: 0 auto
+
+            span
+                color: #8592C6
+
+
+.obligations_block_element_button
+    text-align: center
+    padding: 20px 0
+
+
+.telegram_authorization
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.telegram_authorization_image
+    margin: 0 auto
+    border-radius: 50%
+    background: linear-gradient(90deg, #14b3ff 0%, #1282fa 100%)
+    width: 70px
+    height: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 30px
+    color: white
+    text-decoration: none
+
+.telegram_authorization_text
+    text-align: center
+    margin: 45px 0
+
+    h1
+        color: #9BAAD9
+        font-size: 20px
+        font-weight: 400
+
+    p
+        color: #9BAAD9
+        font-size: 18px
+        font-weight: 400
+
+.telegram_authorization_buttons
+    display: flex
+    margin-top: 65px
+    justify-content: center
+    
+.autch_block_row_input_date
+    display: flex
+
+    input[type="date"]
+        width: calc(85% - 20px)
+        margin: 0 auto
+        margin-top: 20px
+        padding: 10px
+        border: 0
+        background-color: #0E1122
+        color: white
+
+    input[type="date"]::-webkit-calendar-picker-indicator
+        color: white
+        filter: invert(1)
+        position: absolute
+        padding-left: calc(100% - 10px)
+        right: 10px
+        opacity: 0
+
+.process_upload_block
+    width: 100%
+    position: absolute
+    left: 0
+    top: 100%
+    display: flex
+
+.process_upload_block_row
+    width: 100%
+    display: flex
+    position: relative
+
+.process_upload_block_line
+    position: absolute
+    width: 0
+    height: 20px
+    background: linear-gradient(90deg, #14b6ff 0%, #1387ff 61%)
+    transition: all .2s
+
+.Attracted_headerInfoBlock_info_data_alert
+    width: calc(100% - 80px)
+    padding: 40px
+    text-align: center
+    background-color: #182037
+    color: white
+    margin-top: 20px
+    margin-bottom: 20px
+    font-size: 25px
+
+    input[type="file"]
+        display: none
+
+.msg_block_getting_line_img_block
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    width: 100%
+    height: 100%
+    border-radius: 50%
+
+    img
+        width: 100%
+
+.Attracted_by_me_headerRefUrlsBlock_blocks_line_copy
+    width: 45px
+    height: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 40px
+    background: linear-gradient(90deg, #14b6ff 0%, #1387ff 61%)
+    border-radius: 10px
+    cursor: pointer
+
+.settingBlock_body_line_drop_menu
+    width: 400px
+    border-radius: 8px
+    background-color: #182037
+    position: absolute
+    border: 1px solid #0E1122
+    bottom: 100%
+    right: calc(100% - 40px)
+    display: none
+
+    p
+        font-size: 15px
+        display: flex
+        width: 90%
+        margin: 0 auto
+        padding: 10px 0
+
+        span
+            margin-left: 10px
+            color: white
+
+
+.headerPaysBlock_header_span_button_reqvesits
+    display: flex
+    padding: 10px 15px
+    margin-left: 20px
+    border: 1px solid
+    border-radius: 8px
+    cursor: pointer
+    position: relative
+
+    .settingBlock_body_line_drop_menu
+        left: 0
+        bottom: calc(100% + 20px)
+
+
+.headerPaysBlock_header_span_button_msg
+    display: none
+    padding: 10px 15px
+    margin-left: 20px
+    border: 1px solid
+    border-radius: 8px
+    cursor: pointer
+    position: relative
+
+
+.settingBlock_body_line_obligations_btn
+    padding: 10px 20px
+    border-radius: 20px
+    display: block
+    width: -webkit-fit-content
+    width: -moz-fit-content
+    width: fit-content
+    cursor: pointer
+    background: -webkit-gradient(linear, left top, right top, from(#8c80fe), color-stop(61%, #594bd3))
+    background: linear-gradient(90deg, #8c80fe 0%, #594bd3 61%)
+    color: white
+    margin-bottom: 10px
+
+    span
+        color: white
+
+.appendPayBlock
+    width: calc(100% - 40px)
+    background-color: #182037
+    padding: 20px
+    display: flex
+
+.appendPayBlock_line
+    flex: 1
+
+    span
+        display: block
+
+    input[type="text"]
+        width: calc(90% - 20px)
+        padding: 13px
+        margin-top: 20px
+        color: white
+        background-color: #0E1122
+        border: 0
+        font-size: 15px
+
+    input[type="date"]
+        width: 45%
+        padding: 10px
+        margin-top: 20px
+        color: white
+        border: 0
+        background-color: #0E1122
+        font-size: 15px
+
+    input[type="file"]
+        display: none
+
+    button
+        padding: 10px 20px
+        border-radius: 3px
+        margin-right: 20px
+        margin-bottom: 10px
+        margin-top: 10px
+        cursor: pointer
+        background: linear-gradient(90deg, #8c80fe 0%, #594bd3 61%)
+        color: white
+        border: 0
+        margin-left: 20px
+        margin-top: 24px
+
+
+.appendPayBlock_line_button
+    padding: 10px 20px
+    border-radius: 3px
+    cursor: pointer
+    background: linear-gradient(90deg, #8c80fe 0%, #594bd3 61%)
+    color: white
+    border: 0
+    margin-left: 20px
+    margin-top: 24px
+    margin: 0
+    width: fit-content
+    float: left
+    font-size: 13px
+    margin-top: 23px
+    margin-right: 20px
+
+.headerPaysBlock_body_line.alertForLineBlock
+    .headerPaysBlock_body_line_inv
+        span
+            background-color: #cd2b2b
+            background-image: none
+
+.headerPaysBlock_body_line.alertForLine
+    span
+        color: red
+
+.settingBlock_body_line.alertForLine
+    span
+        color: red
+
+
+.obligations_block_element.alertForLine
+    .alert_p_alert
+        color: red
+
+
+.renderCloseBlockBusiness
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.renderCloseBlockBusiness_row
+    width: 100%
+    height: 100%
+    position: relative
+    background-color: rgba(0, 0, 0, 0.4)
+    display: flex
+    justify-content: center
+    align-items: center
+
+.renderCloseBlockBusiness_block
+    width: 600px
+    height: 420px
+    background-color: #182037
+    padding: 30px
+    position: relative
+
+    h1
+        color: #9BAAD9
+        font-size: 20px
+        padding: 0
+        margin: 0
+        font-weight: 400
+        margin-bottom: 25px
+
+.renderCloseBlockBusiness_block_text
+    width: 100%
+
+
+.renderCloseBlockBusiness_block_text_line_circule_block
+    width: 25px
+    height: 25px
+    border: 4px solid #4c51d6
+    border-radius: 50%
+    margin-right: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.renderCloseBlockBusiness_block_text_line_circule
+    display: flex
+    align-items: center
+    font-size: 18px
+    color: #d9dff3
+
+.renderCloseBlockBusiness_block_text_line_drop_menu
+    display: none
+
+.renderCloseBlockBusiness_block_text_line_drop_menu_line
+    display: flex
+    align-items: center
+    width: 85%
+    margin: 0 auto
+    padding: 10px 0
+
+    input
+        width: 20px
+        height: 20px
+        margin-right: 15px
+
+.renderCloseBlockBusiness_block_text_line_circule_block_row
+    width: 15px
+    height: 15px
+    background-color: #4c51d6
+    border-radius: 50%
+    display: none
+
+.renderCloseBlockBusiness_block_text_line
+    cursor: pointer
+
+.renderCloseBlockBusiness_block_text_line.selected
+    .renderCloseBlockBusiness_block_text_line_drop_menu
+        display: block
+
+    .renderCloseBlockBusiness_block_text_line_circule_block_row
+        display: block
+
+.renderCloseBlockBusiness_block_input
+    display: flex
+    position: absolute
+    bottom: 20px
+    width: 100%
+
+    input
+        background-color: #0E1122
+        border: 0
+        width: calc(100% - 200px)
+        padding: 15px
+        border-radius: 4px
+        color: white
+
+.renderCloseBlockBusiness_block_input_button
+    width: 115px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #bf3636
+    cursor: pointer
+
+
+.settingBlock_body_line_not_correct_again
+    background: linear-gradient(90deg, #14b6ff 0%, #1387ff 61%)
+    padding: 10px 20px
+    border-radius: 8px
+    cursor: pointer
+
+    span
+        color: white
+
+.settingBlock_body_line_not_correct_complaint
+    color: white
+    padding: 10px 20px
+    border-radius: 8px
+    background-color: #c42020
+    cursor: pointer
+
+    span
+        color: white
+
+.settingBlock_body_line_not_correct_msg
+    background: linear-gradient(90deg, #57b32a 0%, #17c413 61%)
+    padding: 10px 20px
+    border-radius: 8px
+    cursor: pointer
+    color: white
+
+    span
+        color: white
+
+.chat_block_info_more_buttons
+    position: absolute
+    top: calc(100% + 30px)
+    left: 0
+    width: 100%
+    display: none
+
+.chat_block_info_more_buttons_line
+    width: calc(100% - 20px)
+    padding: 10px
+    margin-bottom: 20px
+    background: linear-gradient(90deg, #14b6ff 0%, #1387ff 61%)
+    color: white
+    border-radius: 6px
+    cursor: pointer
+
+    span
+        color: white
+
+.info_active_block_left_buttons_notFullpay_line_row
+    width: 100%
+
+.info_active_block_left_buttons_notFullpay_line
+    display: flex
+    justify-content: space-between
+    width: 100%
+    align-items: center
+
+    i
+        color: #14b6ff
+
+
+.buttonsTypeBlock_row_not_full_payData
+    display: flex
+    width: 100%
+    align-items: center
+
+
+
+
+
+
+@media (max-width: 1600px)       
+
+    .creating_page 
+        width: 50%
+
+
+@media (max-width: 1300px)       
+
+    .creating_page 
+        width: 60%
+
+@media (max-width: 1000px)       
+
+    .creating_page 
+        width: 90%
+
+@media (max-width: 700px)       
+
+    .creating_page 
+        width: 90%
+
+    .creating_page_input
+        width: calc(100% - 20px)
+
+    .index_page_body_header_user_avatar_img
+        display: none
+
+    .add_project_button
+        display: none
